@@ -1,11 +1,13 @@
 #!/bin/bash
+#./findsub.sh domain.com outfile.txt
+#will need to define your puredns bruteforce and resolvers files in script
 domain=$1
 out=$2
 w=working.out
 s=sorted.out
 amass enum --active --brute -d $domain -o amass.out
 subfinder -d $domain -o subfinder.out
-puredns bruteforce /media/grampae/extradrive1/Wordlists/all.txt $domain -r /home/grampae/Tools/massdns/lists/resolvers.txt >puredns.out
+puredns bruteforce /Wordlists/all.txt $domain -r /lists/resolvers.txt >puredns.out
 cat amass.out > $w
 cat subfinder.out >> $w
 cat puredns.out >> $w
