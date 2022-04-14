@@ -50,10 +50,10 @@ while read target domain
   mv ~/recon/$target/$domain/aquatone_urls-nodupes.txt ~/recon/$target/$domain/aquatone_urls.txt
   zip -r -q ~/recon/$target/$domain/aquatone.zip ~/recon/$target/$domain/
   printf "\nSending Results to Slack\n"
-  curl -F file=@~/recon/$target/$domain/aquatone.zip -F initial_comment=$target/$domain/zipped_report -F channels=$slack_channel -H "Authorization: Bearer " https://slack.com/api/files.upload > /dev/null
-  curl -F file=@~/recon/$target/$domain/aquatone_urls.txt -F initial_comment=$target/$domain/urls -F channels=$slack_channel -H "Authorization: Bearer " https://slack.com/api/files.upload > /dev/null
-  curl -s -F file=@~/recon/$target/$domain/aquatone_urls-onlynew.txt -F initial_comment=$target/$domain/new-urls -F channels=$slack_channel -H "Authorization: Bearer" https://slack.com/api/files.upload > /dev/null
-  curl -F file=@~/recon/$target/$domain/takeover.txt -F initial_comment=$target/$domain/subdomaintakeover -F channels=$slack_channel -H "Authorization: Bearer " https://slack.com/api/files.upload > /dev/null
+  curl -F file=@~/recon/$target/$domain/aquatone.zip -F initial_comment=$target/$domain/zipped_report -F channels=$slack_channel -H "Authorization: Bearer $slack_token" https://slack.com/api/files.upload > /dev/null
+  curl -F file=@~/recon/$target/$domain/aquatone_urls.txt -F initial_comment=$target/$domain/urls -F channels=$slack_channel -H "Authorization: Bearer $slack_token" https://slack.com/api/files.upload > /dev/null
+  curl -s -F file=@~/recon/$target/$domain/aquatone_urls-onlynew.txt -F initial_comment=$target/$domain/new-urls -F channels=$slack_channel -H "Authorization: Bearer $slack_token" https://slack.com/api/files.upload > /dev/null
+  curl -F file=@~/recon/$target/$domain/takeover.txt -F initial_comment=$target/$domain/subdomaintakeover -F channels=$slack_channel -H "Authorization: Bearer $slack_token" https://slack.com/api/files.upload > /dev/null
 done <~/argtemp.txt
 rm ~/argtemp.txt
 printf "\n\nDone!\n"
