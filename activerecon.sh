@@ -1,5 +1,5 @@
 ########################################
-#List of targets activerecon.sh path/to/sub/file directory
+#./activerecon.sh targets.txt path/to/sub/file directory
 ########################################
 slack_channel="#recon"
 
