@@ -1,3 +1,3 @@
 # SecScripts
   
-Collection of short scriptss to automate and avoid repeating menial tasks.
+Collection of short scripts to automate and avoid repeating menial tasks.
