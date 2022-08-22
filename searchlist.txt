@@ -1,0 +1,15 @@
+pass
+sensitive
+admin
+login
+secret
+unattend
+vmdk
+creds
+credential
+.config
+ssh
+rdp
+vnc
+ssn
+eid
