@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#Manage rebrandly short links, used in an engagement.
 import requests
 import json
 import argparse
