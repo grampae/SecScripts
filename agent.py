@@ -1,3 +1,4 @@
+#use pushover to communicate with shell
 import requests
 import subprocess
 import json
