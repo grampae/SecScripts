@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#dump object.entries to json and print xss helpers
 import os
 import sys
 import signal
