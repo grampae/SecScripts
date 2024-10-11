@@ -1,3 +1,3 @@
 # SecScripts
   
-Collection of short scripts to automate and avoid repeating menial tasks.
+Random assortment of things, mostly used in penetration testing.
