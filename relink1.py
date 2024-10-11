@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Manage rebrandly short links, used in an engagement.
+#Manage rebrandly short links, used during engagement where subdomain takeover happened.
 import requests
 import json
 import argparse
