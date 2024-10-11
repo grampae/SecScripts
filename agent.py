@@ -1,4 +1,5 @@
 #use pushover to communicate with shell
+#You can use the pushover browser client to communicate with all of your pushover "bots"
 import requests
 import subprocess
 import json
